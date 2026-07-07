@@ -1,17 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const pg = require('pg');
-const dotenv = require('dotenv').config()
-const app = express();
+import app from "./src/app.js";
+import dotenv from "dotenv";
 
-app.use(cors());
-app.use(express.json());
+dotenv.config();
 
-app.get('/', async (req, res) => {
-  res.send('Serveur ok !');
-});
-console.log(`bonjour ${process.env.PASSWORD} `)
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-  console.log('Serveur lancé sur http://localhost:3000');
+app.listen(PORT, () => {
+    console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
