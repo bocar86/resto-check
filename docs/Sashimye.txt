@@ -1,2 +1,4 @@
 - Faire les routes
+- Faire des efforts
+- Lesgo
 - se connecter à la base de données postgresql
