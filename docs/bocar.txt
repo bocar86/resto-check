@@ -1,1 +1,2 @@
-faire les routes
+faire les routes 
+se connecter à postgresql
