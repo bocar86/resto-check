@@ -1,2 +1,2 @@
-faire les routes
-Sam je t'ai a l'oeil
+faire les routes 
+se connecter à postgresql
