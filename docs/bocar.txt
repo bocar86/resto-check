@@ -1,2 +1,0 @@
-faire les routes 
-se connecter à postgresql

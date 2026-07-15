@@ -1,0 +1,19 @@
+name: resto-check
+
+services:
+  db:
+    image: postgres:16
+    container_name: resto_check_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: resto-check
+    ports:
+      - "5433:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./migrations/001_create_tables.up.sql:/docker-entrypoint-initdb.d/001_init.sql
+
+volumes:
+  db_data:
