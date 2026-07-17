@@ -2,27 +2,39 @@ import express from "express";
 import cors from "cors";
 import pool from "./config/db.js";
 
+// Import des routes
+import rolesRouter from "./routes/roles.js";
+import responsablesRouter from "./routes/responsables.js";
+import employesRouter from "./routes/employes.js";
+import categoriesRouter from "./routes/categories.js";
+import stocksRouter from "./routes/stocks.js";
+
 const app = express();
 
-// Middlewares (s'exécutent avant tes routes)
-app.use(cors()); // autorise le frontend à appeler l'API
-app.use(express.json()); // permet de lire le body JSON
+// Middlewares
+app.use(cors());
+app.use(express.json());
 
-// Route de test : vérifier que le serveur répond
+// Route de test serveur
 app.get("/", (req, res) => {
-    res.json({ message: "API opérationnelle 🚀" });
+  res.json({ message: "API opérationnelle 🚀" });
 });
 
-// Route de test : vérifier que la base de données répond
+// Route de test BDD
 app.get("/db-test", async (req, res) => {
-    try {
-        const result = await pool.query("SELECT NOW()");
-        res.json(result.rows);
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
+  try {
+    const result = await pool.query("SELECT NOW()");
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-// (Ici viendront tes routes : app.use("/tasks", tasksRoutes) etc.)
+// Routes API
+app.use("/api/roles", rolesRouter);
+app.use("/api/responsables", responsablesRouter);
+app.use("/api/employes", employesRouter);
+app.use("/api/categories", categoriesRouter);
+app.use("/api/stocks", stocksRouter);
 
 export default app;
