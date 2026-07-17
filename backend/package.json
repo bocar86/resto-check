@@ -5,7 +5,9 @@
     "type": "module",
     "scripts": {
         "start": "node server.js",
-        "dev": "nodemon server.js"
+        "dev": "nodemon server.js",
+        "migrate:up": "/Library/PostgreSQL/18/bin/psql -h localhost -p 5433 -U postgres -d resto-check -f migrations/001_create_tables.up.sql",
+        "migrate:down": "/Library/PostgreSQL/18/bin/psql -h localhost -p 5433 -U postgres -d resto-check -f migrations/001_create_tables.down.sql"
     },
     "keywords": [],
     "author": "",

@@ -1,15 +1,3 @@
-# Dépendances (lourdes, réinstallables)
-node_modules/
-
-# Variables d'environnement (SECRETS — jamais sur GitHub !)
-.env
-
-# Fichiers de build
-dist/
-build/
-
-# Logs
-*.log
-
-# Fichiers système
 .DS_Store
+node_modules/
+.env
