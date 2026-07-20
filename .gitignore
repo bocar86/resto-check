@@ -3,6 +3,8 @@ node_modules/
 
 # Variables d'environnement (SECRETS — jamais sur GitHub !)
 .env
+.env.local
+.env.*.local
 
 # Fichiers de build
 dist/
@@ -10,6 +12,14 @@ build/
 
 # Logs
 *.log
+npm-debug.log*
 
 # Fichiers système
 .DS_Store
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+
+# Cache Vite
+.vite/
