@@ -1,14 +1,11 @@
 import express from "express";
 import cors from "cors";
 import pool from "./config/db.js";
-<<<<<<< HEAD
 import rolesRoutes from "./routes/roles.routes.js";
 import responsablesRoutes from "./routes/responsables.routes.js";
 import employesRoutes from "./routes/employes.routes.js";
 import categoriesRoutes from "./routes/categories.routes.js";
 import stockRoutes from "./routes/stock.routes.js";
-=======
->>>>>>> 7cb3ba9df1d3e731a292595711d29953fd1de4e1
 
 const app = express();
 
@@ -31,14 +28,10 @@ app.get("/db-test", async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
 app.use("/roles", rolesRoutes);
 app.use("/responsables", responsablesRoutes);
 app.use("/employes", employesRoutes);
 app.use("/categories", categoriesRoutes);
 app.use("/stock", stockRoutes);
-=======
-// (Ici viendront tes routes : app.use("/tasks", tasksRoutes) etc.)
->>>>>>> 7cb3ba9df1d3e731a292595711d29953fd1de4e1
 
 export default app;
