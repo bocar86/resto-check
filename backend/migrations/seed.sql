@@ -1,28 +1,28 @@
--- Données de test
+-- Seed : données initiales
 
 INSERT INTO roles (nom) VALUES
-    ('Administrateur'),
-    ('Manager'),
-    ('Employe');
+('admin'),
+('manager'),
+('employe');
 
 INSERT INTO categories (nom) VALUES
-    ('Boissons'),
-    ('Viandes'),
-    ('Legumes'),
-    ('Epicerie');
+('Boissons'),
+('Viandes'),
+('Légumes'),
+('Épicerie');
 
 INSERT INTO responsables (nom, prenom, email, telephone, mot_de_passe, id_role) VALUES
-    ('Diallo', 'Awa', 'awa.diallo@resto-check.fr', '0600000001', 'changeme', 1),
-    ('Ndiaye', 'Moussa', 'moussa.ndiaye@resto-check.fr', '0600000002', 'changeme', 2);
+('Dupont', 'Jean', 'jean.dupont@resto-check.fr', '0600000000', 'motdepasse123', 1);
 
 INSERT INTO employes (nom, prenom, email, telephone, mot_de_passe) VALUES
-    ('Kelly', 'Samuel', 'samuel.kelly@resto-check.fr', '0600000010', 'changeme'),
-    ('Fall', 'Ibrahima', 'ibrahima.fall@resto-check.fr', '0600000011', 'changeme'),
-    ('Sow', 'Fatou', 'fatou.sow@resto-check.fr', '0600000012', 'changeme');
+('Martin', 'Sophie', 'sophie.martin@resto-check.fr', '0611111111', 'motdepasse123'),
+('Bernard', 'Lucas', 'lucas.bernard@resto-check.fr', '0622222222', 'motdepasse123');
 
 INSERT INTO stock (nom, quantite, unite, id_categorie, seuil_alerte, emballage) VALUES
-    ('Coca-Cola', 50, 'piece', 1, 10, 'canette'),
-    ('Eau minerale', 100, 'piece', 1, 20, 'bouteille'),
-    ('Poulet', 30, 'kg', 2, 5, 'carton'),
-    ('Tomates', 40, 'kg', 3, 8, 'cageot'),
-    ('Farine', 25, 'kg', 4, 5, 'sac');
+('Coca-Cola', 48, 'piece', 1, 12, 'canette'),
+('Eau plate', 100, 'piece', 1, 24, 'bouteille'),
+('Poulet', 25, 'kg', 2, 5, 'sous-vide'),
+('Boeuf haché', 15, 'kg', 2, 3, 'sous-vide'),
+('Tomates', 30, 'kg', 3, 5, 'caisse'),
+('Salade', 20, 'piece', 3, 5, 'caisse'),
+('Farine', 50, 'kg', 4, 10, 'sac');
